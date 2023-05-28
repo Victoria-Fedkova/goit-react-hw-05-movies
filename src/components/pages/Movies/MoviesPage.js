@@ -15,6 +15,7 @@ const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
   const [totalPages, settTotalPages] = useState(0);
+  const [isFound, setIsFound] = useState(true);
 
   const { query, page } = useMemo(
     () => Object.fromEntries([...searchParams]),
@@ -34,6 +35,8 @@ const MoviesPage = () => {
 
   useEffect(() => {
     if (!query) return;
+    setIsloading(true);
+
     getMovieByQuery(query, page)
       .then(response => {
         if (response.status !== 200) {
@@ -46,6 +49,11 @@ const MoviesPage = () => {
           ...prevState,
           ...getMoviesInfo(response.data.results),
         ]);
+
+        setIsFound(response.data.results.length > 0);
+        // if(movies.length>0){
+        // setIsFound(true);
+        // }
       })
       .catch(e => console.error(e))
       .finally(() => setIsloading(false));
@@ -56,6 +64,12 @@ const MoviesPage = () => {
     const query = searchParams.get('query');
     setSearchParams({ query, page: Number(prevPage) + 1 });
   };
+
+  console.log('---------------');
+  console.log('movies.length === 0', movies.length === 0);
+  console.log('query', query);
+  console.log('!isLoading', !isLoading);
+  console.log('---------------');
   return (
     <>
       <div>
@@ -68,13 +82,14 @@ const MoviesPage = () => {
         </Form>
       </div>
       {isLoading && <Loader />}
-      {movies.length && (
+      {isFound && query && !isLoading ? (
         <>
           <Gallery movies={movies} location={location} />
           {page < totalPages && <Button onLoadMore={onLoadMore} />}
         </>
+      ) : (
+        <PlaceholderSerch />
       )}
-      {movies.length === 0 && query && !isLoading && <PlaceholderSerch />}
     </>
   );
 };

@@ -8,7 +8,7 @@ import PlaceholderSerch from '../NotFound/Placeholder';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
-  const [MovieDetails, setMovieDetails] = useState({});
+  const [MovieDetails, setMovieDetails] = useState(null);
   const [isLoading, setIsloading] = useState(false);
 
   const location = useLocation();
