@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.a77d2e06.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.b0c1ec01.js",
     "static/js/300.a4bfad4b.chunk.js": "/goit-react-hw-05-movies/static/js/300.a4bfad4b.chunk.js",
     "static/js/63.6a815e44.chunk.js": "/goit-react-hw-05-movies/static/js/63.6a815e44.chunk.js",
-    "static/js/675.c80c99aa.chunk.js": "/goit-react-hw-05-movies/static/js/675.c80c99aa.chunk.js",
+    "static/js/885.5846aec3.chunk.js": "/goit-react-hw-05-movies/static/js/885.5846aec3.chunk.js",
     "static/js/89.cac480b3.chunk.js": "/goit-react-hw-05-movies/static/js/89.cac480b3.chunk.js",
     "static/js/0.e40e4038.chunk.js": "/goit-react-hw-05-movies/static/js/0.e40e4038.chunk.js",
     "static/js/767.1cf159ef.chunk.js": "/goit-react-hw-05-movies/static/js/767.1cf159ef.chunk.js",
@@ -15,10 +15,10 @@
     "static/media/page-not-found-error-404-system-updates-uploading-computing-operation-installation-programs-system-maintenance-a-hand-drawn-layout-template-of-a-broken-robot-illustration-vector.jpg": "/goit-react-hw-05-movies/static/media/page-not-found-error-404-system-updates-uploading-computing-operation-installation-programs-system-maintenance-a-hand-drawn-layout-template-of-a-broken-robot-illustration-vector.3ddd02f438ffda679905.jpg",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css.map",
-    "main.a77d2e06.js.map": "/goit-react-hw-05-movies/static/js/main.a77d2e06.js.map",
+    "main.b0c1ec01.js.map": "/goit-react-hw-05-movies/static/js/main.b0c1ec01.js.map",
     "300.a4bfad4b.chunk.js.map": "/goit-react-hw-05-movies/static/js/300.a4bfad4b.chunk.js.map",
     "63.6a815e44.chunk.js.map": "/goit-react-hw-05-movies/static/js/63.6a815e44.chunk.js.map",
-    "675.c80c99aa.chunk.js.map": "/goit-react-hw-05-movies/static/js/675.c80c99aa.chunk.js.map",
+    "885.5846aec3.chunk.js.map": "/goit-react-hw-05-movies/static/js/885.5846aec3.chunk.js.map",
     "89.cac480b3.chunk.js.map": "/goit-react-hw-05-movies/static/js/89.cac480b3.chunk.js.map",
     "0.e40e4038.chunk.js.map": "/goit-react-hw-05-movies/static/js/0.e40e4038.chunk.js.map",
     "767.1cf159ef.chunk.js.map": "/goit-react-hw-05-movies/static/js/767.1cf159ef.chunk.js.map",
@@ -28,6 +28,6 @@
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.a77d2e06.js"
+    "static/js/main.b0c1ec01.js"
   ]
 }
