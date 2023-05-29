@@ -84,13 +84,13 @@ const MoviesPage = () => {
         </Form>
       </HeadingWraper>
       {isLoading && <Loader />}
-      {isFound && query && !isLoading ? (
+      {isFound && query && !isLoading && (
         <>
           <Gallery movies={movies} location={location} />
           {page < totalPages && <Button onLoadMore={onLoadMore} />}
         </>
-      ) : (
-        <PlaceholderSerch />
+        // ) : (
+        // <PlaceholderSerch />
       )}
     </>
   );
