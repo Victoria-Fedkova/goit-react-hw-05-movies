@@ -1,33 +1,35 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.f8efaea1.js",
-    "static/js/300.7838e940.chunk.js": "/goit-react-hw-05-movies/static/js/300.7838e940.chunk.js",
-    "static/js/969.d6945041.chunk.js": "/goit-react-hw-05-movies/static/js/969.d6945041.chunk.js",
-    "static/js/93.f62a52e3.chunk.js": "/goit-react-hw-05-movies/static/js/93.f62a52e3.chunk.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.9f6fcb0c.js",
+    "static/js/300.af0fb66f.chunk.js": "/goit-react-hw-05-movies/static/js/300.af0fb66f.chunk.js",
+    "static/js/969.bc35230b.chunk.js": "/goit-react-hw-05-movies/static/js/969.bc35230b.chunk.js",
+    "static/js/93.78e3b075.chunk.js": "/goit-react-hw-05-movies/static/js/93.78e3b075.chunk.js",
     "static/js/89.cac480b3.chunk.js": "/goit-react-hw-05-movies/static/js/89.cac480b3.chunk.js",
-    "static/js/0.e40e4038.chunk.js": "/goit-react-hw-05-movies/static/js/0.e40e4038.chunk.js",
-    "static/js/767.1cf159ef.chunk.js": "/goit-react-hw-05-movies/static/js/767.1cf159ef.chunk.js",
+    "static/js/180.91b0896b.chunk.js": "/goit-react-hw-05-movies/static/js/180.91b0896b.chunk.js",
+    "static/js/404.dd2d85bc.chunk.js": "/goit-react-hw-05-movies/static/js/404.dd2d85bc.chunk.js",
     "static/js/744.a57a209e.chunk.js": "/goit-react-hw-05-movies/static/js/744.a57a209e.chunk.js",
     "static/js/243.7a752346.chunk.js": "/goit-react-hw-05-movies/static/js/243.7a752346.chunk.js",
-    "static/js/664.7697d1e1.chunk.js": "/goit-react-hw-05-movies/static/js/664.7697d1e1.chunk.js",
+    "static/js/135.db568e52.chunk.js": "/goit-react-hw-05-movies/static/js/135.db568e52.chunk.js",
+    "static/js/686.fcaf303a.chunk.js": "/goit-react-hw-05-movies/static/js/686.fcaf303a.chunk.js",
     "static/media/404-we-cant-find.webp": "/goit-react-hw-05-movies/static/media/404-we-cant-find.8d088c3384f65d8c416e.webp",
     "static/media/page-not-found-error-404-system-updates-uploading-computing-operation-installation-programs-system-maintenance-a-hand-drawn-layout-template-of-a-broken-robot-illustration-vector.jpg": "/goit-react-hw-05-movies/static/media/page-not-found-error-404-system-updates-uploading-computing-operation-installation-programs-system-maintenance-a-hand-drawn-layout-template-of-a-broken-robot-illustration-vector.3ddd02f438ffda679905.jpg",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-05-movies/static/css/main.7acaea2f.css.map",
-    "main.f8efaea1.js.map": "/goit-react-hw-05-movies/static/js/main.f8efaea1.js.map",
-    "300.7838e940.chunk.js.map": "/goit-react-hw-05-movies/static/js/300.7838e940.chunk.js.map",
-    "969.d6945041.chunk.js.map": "/goit-react-hw-05-movies/static/js/969.d6945041.chunk.js.map",
-    "93.f62a52e3.chunk.js.map": "/goit-react-hw-05-movies/static/js/93.f62a52e3.chunk.js.map",
+    "main.9f6fcb0c.js.map": "/goit-react-hw-05-movies/static/js/main.9f6fcb0c.js.map",
+    "300.af0fb66f.chunk.js.map": "/goit-react-hw-05-movies/static/js/300.af0fb66f.chunk.js.map",
+    "969.bc35230b.chunk.js.map": "/goit-react-hw-05-movies/static/js/969.bc35230b.chunk.js.map",
+    "93.78e3b075.chunk.js.map": "/goit-react-hw-05-movies/static/js/93.78e3b075.chunk.js.map",
     "89.cac480b3.chunk.js.map": "/goit-react-hw-05-movies/static/js/89.cac480b3.chunk.js.map",
-    "0.e40e4038.chunk.js.map": "/goit-react-hw-05-movies/static/js/0.e40e4038.chunk.js.map",
-    "767.1cf159ef.chunk.js.map": "/goit-react-hw-05-movies/static/js/767.1cf159ef.chunk.js.map",
+    "180.91b0896b.chunk.js.map": "/goit-react-hw-05-movies/static/js/180.91b0896b.chunk.js.map",
+    "404.dd2d85bc.chunk.js.map": "/goit-react-hw-05-movies/static/js/404.dd2d85bc.chunk.js.map",
     "744.a57a209e.chunk.js.map": "/goit-react-hw-05-movies/static/js/744.a57a209e.chunk.js.map",
     "243.7a752346.chunk.js.map": "/goit-react-hw-05-movies/static/js/243.7a752346.chunk.js.map",
-    "664.7697d1e1.chunk.js.map": "/goit-react-hw-05-movies/static/js/664.7697d1e1.chunk.js.map"
+    "135.db568e52.chunk.js.map": "/goit-react-hw-05-movies/static/js/135.db568e52.chunk.js.map",
+    "686.fcaf303a.chunk.js.map": "/goit-react-hw-05-movies/static/js/686.fcaf303a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.f8efaea1.js"
+    "static/js/main.9f6fcb0c.js"
   ]
 }
