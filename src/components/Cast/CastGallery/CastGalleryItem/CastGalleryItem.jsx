@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { CastGalleryItemCard } from './CastGalleryItem.styled';
 
 const CastGalleryItem = ({
@@ -18,6 +19,15 @@ const CastGalleryItem = ({
       </div>
     </CastGalleryItemCard>
   );
+};
+CastGalleryItem.propTypes = {
+  actor: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    w300imgUrl: PropTypes.string.isRequired,
+    w500imgUrl: PropTypes.string.isRequired,
+    character: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default CastGalleryItem;

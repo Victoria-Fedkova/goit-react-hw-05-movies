@@ -1,4 +1,5 @@
 import { InfoWrapper, Wrapper } from './MovieInfo.styled';
+import PropTypes from 'prop-types';
 
 const MovieInfo = ({
   movie: {
@@ -7,7 +8,7 @@ const MovieInfo = ({
     popularity,
     vote,
     votes,
-    w300imgUrl,
+    // w300imgUrl,
     w500imgUrl,
     genres,
     about,
@@ -49,4 +50,19 @@ const MovieInfo = ({
     </Wrapper>
   );
 };
+
+MovieInfo.propTypes = {
+  actor: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    titleOriginal: PropTypes.string.isRequired,
+    popularity: PropTypes.string.isRequired,
+    vote: PropTypes.string.isRequired,
+    votes: PropTypes.string.isRequired,
+    // w300imgUrl,
+    w500imgUrl: PropTypes.string.isRequired,
+    genres: PropTypes.string.isRequired,
+    about: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
 export default MovieInfo;
