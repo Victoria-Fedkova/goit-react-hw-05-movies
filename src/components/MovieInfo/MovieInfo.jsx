@@ -52,12 +52,12 @@ const MovieInfo = ({
 };
 
 MovieInfo.propTypes = {
-  actor: PropTypes.shape({
+  movie: PropTypes.shape({
     title: PropTypes.string.isRequired,
     titleOriginal: PropTypes.string.isRequired,
-    popularity: PropTypes.string.isRequired,
-    vote: PropTypes.string.isRequired,
-    votes: PropTypes.string.isRequired,
+    popularity: PropTypes.number.isRequired,
+    vote: PropTypes.number.isRequired,
+    votes: PropTypes.number.isRequired,
     // w300imgUrl,
     w500imgUrl: PropTypes.string.isRequired,
     genres: PropTypes.string.isRequired,

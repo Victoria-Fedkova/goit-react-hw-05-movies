@@ -12,6 +12,7 @@ import {
   HeadingWraper,
 } from './MoviesPage.styled';
 import Button from 'components/LoadMoreBtn/LoadMoreBtn';
+import PlaceholderSerch from '../NotFound/Placeholder';
 // import PlaceholderSerch from '../NotFound/Placeholder';
 
 const MoviesPage = () => {
@@ -20,7 +21,8 @@ const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
   const [totalPages, settTotalPages] = useState(0);
-  const [isFound, setIsFound] = useState(true);
+  const [totalResults, setTotalResults] = useState(0);
+  const [error, setError] = useState(false);
 
   const { query, page } = useMemo(
     () => Object.fromEntries([...searchParams]),
@@ -47,15 +49,26 @@ const MoviesPage = () => {
         if (response.status !== 200) {
           throw new Error(`Error in request: ${response.status}`);
         }
-        settTotalPages(response.data.total_pages);
 
-        //обробка результату функцією getMoviesInfo прокидання отриманого обʼєкту в функцію обробник щоб витягнути необхідні поля
+        if (!response.data.results.length) {
+          setError(true);
+          console.log('oops res', response.data.total_results);
+          setIsloading(false);
+          return console.log(
+            'There is no movies with this request. Please, try again'
+          );
+        }
+        setError(false);
+        settTotalPages(response.data.total_pages);
+        setTotalResults(response.data.total_results);
+        // console.log(response.data.total_results);
+        // console.log(response.data.total_pages);
+
         setMovies(prevState => [
           ...prevState,
           ...getMoviesInfo(response.data.results),
         ]);
-
-        setIsFound(response.data.results.length > 0);
+        // setIsFound(response.data.results.length > 0);
       })
       .catch(e => console.error(e))
       .finally(() => setIsloading(false));
@@ -84,14 +97,13 @@ const MoviesPage = () => {
         </Form>
       </HeadingWraper>
       {isLoading && <Loader />}
-      {isFound && query && !isLoading && (
+      {!error && query && !isLoading && totalResults && (
         <>
           <Gallery movies={movies} location={location} />
           {page < totalPages && <Button onLoadMore={onLoadMore} />}
         </>
-        // ) : (
-        // <PlaceholderSerch />
       )}
+      {error && query && !isLoading && <PlaceholderSerch />}
     </>
   );
 };

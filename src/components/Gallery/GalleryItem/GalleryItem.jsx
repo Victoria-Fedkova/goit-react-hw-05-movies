@@ -36,7 +36,7 @@ GalleryItem.propTypes = {
     title: PropTypes.string.isRequired,
     w300imgUrl: PropTypes.string.isRequired,
     w500imgUrl: PropTypes.string.isRequired,
-    year: PropTypes.number.isRequired,
+    year: PropTypes.string.isRequired,
   }),
 };
 
