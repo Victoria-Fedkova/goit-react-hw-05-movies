@@ -5,6 +5,7 @@ import Gallery from 'components/Gallery/Gallery';
 import { getMoviesInfo, getPopularMovie } from 'services/getMovies';
 import Button from 'components/LoadMoreBtn/LoadMoreBtn';
 import { Heading } from './HomePage.styled';
+import ScrollToTop from 'components/Cast/GoToTopBtn/GoToTopBtn';
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
@@ -48,6 +49,7 @@ const HomePage = () => {
               {page < totalPages && <Button onLoadMore={onLoadMore} />}
             </>
           )}
+          <ScrollToTop />
         </div>
       )}
     </>

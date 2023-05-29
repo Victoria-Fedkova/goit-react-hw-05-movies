@@ -17,7 +17,7 @@ export const GalleryGrid = styled.ul`
     display: grid;
     grid-template-columns: repeat(2, minmax(336px, 1fr));
 
-    grid-template-rows: repeat(auto-fit, 224px);
+    grid-template-rows: repeat(auto-fit, 1fr);
     grid-column-gap: 32px;
     grid-row-gap: 32px;
   }

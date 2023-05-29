@@ -12,14 +12,22 @@ export const CastGalleryItemCard = styled.li`
   & img {
     display: block;
     width: 100%;
-    height: 80%;
+    height: 90%;
     object-fit: cover;
+    @media (min-width: 768px) {
+      height: 80%;
+    }
   }
   & div {
-    padding: 5px;
+    padding: 10px;
   }
-  & h4 {
-    margin: 0;
+  & h4,
+  & p {
+    margin-bottom: 0;
+    margin-top: 5px;
     padding: 0;
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
   }
 `;

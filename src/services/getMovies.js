@@ -5,6 +5,8 @@ const API_KEY = 'ae38d5c8baf36c9c4ca14e9456f3c0fd';
 //зображення що завантажиться при відсутності постеру
 const DEFAULT_IMG =
   'https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg';
+const DEFAULT_AVATAR =
+  'https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png';
 
 //запит до серверу, що отримує дані популярних фільмів
 export const getPopularMovie = async pageNumber => {
@@ -91,7 +93,13 @@ export const getReviews = async id => {
 export const getReviewsInfo = reviewsArr => {
   return reviewsArr.map(review => {
     const reviewInfo = {
-      author: review.author,
+      avatar_path: review.author_details.avatar_path.includes('https')
+        ? DEFAULT_AVATAR
+        : `https://www.themoviedb.org/t/p/w300_and_h300_face${review.author_details.avatar_path}`,
+      username: review.author_details.username,
+      name: review.author_details.name
+        ? review.author_details.name
+        : review.author,
       content: review.content,
       id: review.id,
     };

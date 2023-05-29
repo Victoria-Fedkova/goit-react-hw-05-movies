@@ -6,7 +6,6 @@ import Loader from 'components/Loader/Loader';
 
 const Cast = () => {
   const { movieId } = useParams();
-
   const [castInfo, setCastInfo] = useState([]);
   const [isLoading, setIsloading] = useState(false);
 
@@ -27,7 +26,11 @@ const Cast = () => {
   return (
     <div>
       {isLoading && <Loader />}
-      <CastGallery cast={castInfo} />
+      {castInfo.length ? (
+        <CastGallery cast={castInfo} />
+      ) : (
+        <h2>Oops! There is no info here...</h2>
+      )}
     </div>
   );
 };

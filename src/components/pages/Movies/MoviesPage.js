@@ -3,7 +3,7 @@ import { FaSearch } from 'react-icons/fa';
 import Notiflix from 'notiflix';
 import { getMovieByQuery, getMoviesInfo } from 'services/getMovies';
 import Gallery from 'components/Gallery/Gallery';
-import { useLocation, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import Loader from 'components/Loader/Loader';
 import {
   Form,
@@ -13,13 +13,14 @@ import {
 } from './MoviesPage.styled';
 import Button from 'components/LoadMoreBtn/LoadMoreBtn';
 import PlaceholderSerch from '../NotFound/Placeholder';
+import ScrollToTop from 'components/Cast/GoToTopBtn/GoToTopBtn';
 // import PlaceholderSerch from '../NotFound/Placeholder';
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsloading] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
-  const location = useLocation();
+  // const location = useLocation();
   const [totalPages, settTotalPages] = useState(0);
   const [totalResults, setTotalResults] = useState(0);
   const [error, setError] = useState(false);
@@ -97,13 +98,14 @@ const MoviesPage = () => {
         </Form>
       </HeadingWraper>
       {isLoading && <Loader />}
-      {!error && query && !isLoading && totalResults && (
+      {!error && query && totalResults && (
         <>
-          <Gallery movies={movies} location={location} />
+          <Gallery movies={movies} />
           {page < totalPages && <Button onLoadMore={onLoadMore} />}
         </>
       )}
       {error && query && !isLoading && <PlaceholderSerch />}
+      <ScrollToTop />
     </>
   );
 };

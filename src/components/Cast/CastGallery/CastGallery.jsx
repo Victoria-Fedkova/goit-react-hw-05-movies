@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { CastGalleryGrid } from '../CastGallery.styled';
+import { CastGalleryGrid } from './/CastGallery.styled';
 import CastGalleryItem from './CastGalleryItem/CastGalleryItem';
 
 const CastGallery = ({ cast }) => {

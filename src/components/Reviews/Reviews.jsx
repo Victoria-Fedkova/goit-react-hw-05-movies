@@ -17,6 +17,7 @@ const Reviews = () => {
         if (response.status !== 200) {
           throw new Error(`Error in request: ${response.status}`);
         }
+        console.log(response.data.results);
         setReviews(getReviewsInfo(response.data.results));
       })
       .catch(e => console.error(e))
@@ -29,7 +30,7 @@ const Reviews = () => {
       {reviews.length ? (
         <ReviewsList reviews={reviews} />
       ) : (
-        <h3>There is no reviews on this movie yet...</h3>
+        <h3>There is no review for this movie yet...</h3>
       )}
     </div>
   );
