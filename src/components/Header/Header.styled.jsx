@@ -17,6 +17,22 @@ export const Header = styled.header`
   transition: all 250ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
   margin-bottom: 12px;
+
+  & nav {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    text-align: right;
+
+    @media (min-width: 768px) {
+      width: 768px;
+    }
+    @media (min-width: 1280px) {
+      width: 1280px;
+    }
+  }
 `;
 export const NavLinks = styled(NavLink)`
   display: inline-block;

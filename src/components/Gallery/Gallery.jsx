@@ -1,12 +1,13 @@
+import { GalleryGrid } from './Gallery.styled';
 import GalleryItem from './GalleryItem/GalleryItem';
 import PropTypes from 'prop-types';
 
 const Gallery = ({ movies }) => {
   return (
-    <ul>
+    <GalleryGrid>
       {movies &&
         movies.map(movie => <GalleryItem key={movie.id} movie={movie} />)}
-    </ul>
+    </GalleryGrid>
   );
 };
 

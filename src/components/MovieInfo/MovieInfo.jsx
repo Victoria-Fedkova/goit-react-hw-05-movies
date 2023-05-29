@@ -1,3 +1,5 @@
+import { InfoWrapper, Wrapper } from './MovieInfo.styled';
+
 const MovieInfo = ({
   movie: {
     title,
@@ -12,43 +14,39 @@ const MovieInfo = ({
   },
 }) => {
   return (
-    <div>
-      <img
+    <Wrapper w500imgUrl={w500imgUrl}>
+      {/* <img
         srcSet={`${w300imgUrl} 300w, ${w500imgUrl} 500w`}
         sizes="(max-width: 767px) 300px, (min-width: 768px) 500px"
         src={w500imgUrl}
         alt={title}
         loading="lazy"
-      />
+      /> */}
 
-      <div>
-        <strong>{title}</strong>
+      <InfoWrapper>
+        <h1>{title}</h1>
+        <h2>Original Title: {titleOriginal}</h2>
+
         <ul>
           <li>
-            <p>Vote / Votes</p>
+            <h3> Votes</h3>
             <p>
-              <span>{vote}</span>
-              <span> / </span>
-              <span>{votes}</span>
+              <span>{vote}</span>/<span>{votes}</span>
             </p>
           </li>
           <li>
-            <p>Popularity</p>
+            <h3>Popularity</h3>
             <p>{popularity}</p>
           </li>
           <li>
-            <p>Original Title</p>
-            <p>{titleOriginal}</p>
-          </li>
-          <li>
-            <p>Genre</p>
+            <h3>Genre</h3>
             <p>{genres}</p>
           </li>
         </ul>
         <p>About</p>
         <p>{about}</p>
-      </div>
-    </div>
+      </InfoWrapper>
+    </Wrapper>
   );
 };
 export default MovieInfo;

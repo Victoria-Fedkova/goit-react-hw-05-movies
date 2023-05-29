@@ -19,7 +19,6 @@ const Cast = () => {
           throw new Error(`Error in request: ${response.status}`);
         }
         setCastInfo(getCastInfoObj(response.data.cast));
-        // console.log(castInfo);
       })
       .catch(e => console.error(e))
       .finally(() => setIsloading(false));

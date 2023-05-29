@@ -2,7 +2,7 @@ import MovieInfo from 'components/MovieInfo/MovieInfo';
 import { useEffect, useState } from 'react';
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { getMovieById, getMoviesDetails } from 'services/getMovies';
-import { GoBackBtn } from './MoviesDetails.styled';
+import { AddWrapper, GoBackBtn, PageWraper } from './MoviesDetails.styled';
 import Loader from 'components/Loader/Loader';
 import PlaceholderSerch from '../NotFound/Placeholder';
 
@@ -29,28 +29,33 @@ const MovieDetails = () => {
   }, [movieId]);
 
   return (
-    <div>
-      <h2>Movie Details : {movieId}</h2>
+    <PageWraper>
       {isLoading && <Loader />}
       <GoBackBtn to={backLinkHref}>go Back</GoBackBtn>
 
       {MovieDetails && !isLoading && (
         <>
           <MovieInfo movie={MovieDetails} />
-          <h3>Additional information</h3>
-          <ul>
-            <li>
-              <Link to="cast">Cast</Link>
-            </li>
-            <li>
-              <Link to="reviews">Reviews</Link>
-            </li>
-          </ul>
+          <AddWrapper>
+            <h3>Additional information</h3>
+            <ul>
+              <li>
+                <Link to="cast">
+                  <p>Cast</p>
+                </Link>
+              </li>
+              <li>
+                <Link to="reviews">
+                  <p>Reviews</p>
+                </Link>
+              </li>
+            </ul>
+          </AddWrapper>
           <Outlet />
         </>
       )}
       {!MovieDetails && !isLoading && <PlaceholderSerch />}
-    </div>
+    </PageWraper>
   );
 };
 

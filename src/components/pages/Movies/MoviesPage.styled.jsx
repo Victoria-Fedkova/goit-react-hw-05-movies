@@ -1,4 +1,26 @@
 import styled from '@emotion/styled';
+export const HeadingWraper = styled.div`
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+  & h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: 768px) {
+    width: 768px;
+  }
+  @media (min-width: 1280px) {
+    width: 1280px;
+  }
+`;
 
 export const Form = styled.form`
   position: relative;

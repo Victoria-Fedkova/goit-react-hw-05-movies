@@ -5,7 +5,12 @@ import { getMovieByQuery, getMoviesInfo } from 'services/getMovies';
 import Gallery from 'components/Gallery/Gallery';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import Loader from 'components/Loader/Loader';
-import { Form, SearchInput, SearchBtn } from './MoviesPage.styled';
+import {
+  Form,
+  SearchInput,
+  SearchBtn,
+  HeadingWraper,
+} from './MoviesPage.styled';
 import Button from 'components/LoadMoreBtn/LoadMoreBtn';
 import PlaceholderSerch from '../NotFound/Placeholder';
 
@@ -51,9 +56,6 @@ const MoviesPage = () => {
         ]);
 
         setIsFound(response.data.results.length > 0);
-        // if(movies.length>0){
-        // setIsFound(true);
-        // }
       })
       .catch(e => console.error(e))
       .finally(() => setIsloading(false));
@@ -65,22 +67,22 @@ const MoviesPage = () => {
     setSearchParams({ query, page: Number(prevPage) + 1 });
   };
 
-  console.log('---------------');
-  console.log('movies.length === 0', movies.length === 0);
-  console.log('query', query);
-  console.log('!isLoading', !isLoading);
-  console.log('---------------');
+  // console.log('---------------');
+  // console.log('movies.length === 0', movies.length === 0);
+  // console.log('query', query);
+  // console.log('!isLoading', !isLoading);
+  // console.log('---------------');
   return (
     <>
-      <div>
-        <h3>Movies</h3>
+      <HeadingWraper>
+        <h1>Searching movies</h1>
         <Form onSubmit={handleSubmit}>
           <SearchInput type="text" name="query" autoComplete="off" autoFocus />
           <SearchBtn type="submit">
             <FaSearch />
           </SearchBtn>
         </Form>
-      </div>
+      </HeadingWraper>
       {isLoading && <Loader />}
       {isFound && query && !isLoading ? (
         <>

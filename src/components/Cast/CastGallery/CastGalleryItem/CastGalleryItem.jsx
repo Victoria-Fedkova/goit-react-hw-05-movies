@@ -1,8 +1,10 @@
+import { CastGalleryItemCard } from './CastGalleryItem.styled';
+
 const CastGalleryItem = ({
   actor: { name, w300imgUrl, w500imgUrl, character },
 }) => {
   return (
-    <li>
+    <CastGalleryItemCard>
       <img
         srcSet={`${w300imgUrl} 300w, ${w500imgUrl} 500w`}
         sizes={'(max-width: 767px) 300px, (min-width: 768px) 500px'}
@@ -11,10 +13,10 @@ const CastGalleryItem = ({
         loading="lazy"
       />
       <div>
-        <p> {name}</p>
+        <h4> {name}</h4>
         <p>{character}</p>
       </div>
-    </li>
+    </CastGalleryItemCard>
   );
 };
 

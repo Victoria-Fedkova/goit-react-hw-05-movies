@@ -4,6 +4,7 @@ import Loader from 'components/Loader/Loader';
 import Gallery from 'components/Gallery/Gallery';
 import { getMoviesInfo, getPopularMovie } from 'services/getMovies';
 import Button from 'components/LoadMoreBtn/LoadMoreBtn';
+import { Heading } from './HomePage.styled';
 
 const HomePage = () => {
   const [movies, setMovies] = useState([]);
@@ -39,7 +40,7 @@ const HomePage = () => {
       {isLoading && <Loader />}
       {!isLoading && (
         <div>
-          <h1>Trending today</h1>
+          <Heading>Trending today</Heading>
 
           {movies.length && (
             <>

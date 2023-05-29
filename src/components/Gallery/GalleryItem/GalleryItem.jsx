@@ -1,26 +1,32 @@
 import PropTypes from 'prop-types';
-const { Link, useLocation } = require('react-router-dom');
+import {
+  GalleryCardInfo,
+  GalleryImg,
+  GalleryItemCard,
+  GalleryLink,
+} from './GalleryItem.styled';
+const { useLocation } = require('react-router-dom');
 
 const GalleryItem = ({
   movie: { title, w300imgUrl, w500imgUrl, year, id },
 }) => {
   const location = useLocation();
   return (
-    <li>
-      <Link to={`/movies/${id}`} state={{ from: location }}>
-        <img
+    <GalleryItemCard>
+      <GalleryLink to={`/movies/${id}`} state={{ from: location }}>
+        <GalleryImg
           srcSet={`${w300imgUrl} 300w, ${w500imgUrl} 500w`}
           sizes={'(max-width: 767px) 300px, (min-width: 768px) 500px'}
           src={w500imgUrl}
           alt={title}
           loading="lazy"
         />
-        <div>
-          <p> {title}</p>
+        <GalleryCardInfo>
+          <h3>{title}</h3>
           <p>{year}</p>
-        </div>
-      </Link>
-    </li>
+        </GalleryCardInfo>
+      </GalleryLink>
+    </GalleryItemCard>
   );
 };
 
