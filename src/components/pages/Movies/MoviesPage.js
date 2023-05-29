@@ -12,7 +12,7 @@ import {
   HeadingWraper,
 } from './MoviesPage.styled';
 import Button from 'components/LoadMoreBtn/LoadMoreBtn';
-import PlaceholderSerch from '../NotFound/Placeholder';
+// import PlaceholderSerch from '../NotFound/Placeholder';
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
