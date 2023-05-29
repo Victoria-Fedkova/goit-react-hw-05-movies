@@ -29,7 +29,7 @@ const Cast = () => {
       {castInfo.length ? (
         <CastGallery cast={castInfo} />
       ) : (
-        <h2>Oops! There is no info here...</h2>
+        <h3>Oops! There is no info here...</h3>
       )}
     </div>
   );
