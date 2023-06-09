@@ -26,6 +26,8 @@ export const CastGalleryItemCard = styled.li`
     margin-bottom: 0;
     margin-top: 5px;
     padding: 0;
+    font-size: 20px;
+
     @media (max-width: 768px) {
       font-size: 24px;
     }
